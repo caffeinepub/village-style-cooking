@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Figtree:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,54 +6,58 @@
 
 @layer base {
   :root {
-    /* Village Style Cooking — warm earthy palette */
-    --background: 0.97 0.01 80;
-    --foreground: 0.22 0.04 50;
+    /* Araku Bamboo Biryani — tribal warm palette */
+    --background: 0.96 0.02 82;
+    --foreground: 0.2 0.06 45;
 
-    --card: 0.99 0.005 85;
-    --card-foreground: 0.22 0.04 50;
+    --card: 0.98 0.015 80;
+    --card-foreground: 0.2 0.06 45;
 
-    --popover: 0.99 0.005 85;
-    --popover-foreground: 0.22 0.04 50;
+    --popover: 0.98 0.015 80;
+    --popover-foreground: 0.2 0.06 45;
 
-    /* Deep forest green as primary */
-    --primary: 0.38 0.09 155;
-    --primary-foreground: 0.98 0.005 85;
+    /* Deep bark brown */
+    --primary: 0.3 0.08 47;
+    --primary-foreground: 0.97 0.01 82;
 
-    /* Warm amber accent */
-    --secondary: 0.72 0.12 70;
-    --secondary-foreground: 0.18 0.04 40;
+    /* Forest green */
+    --secondary: 0.38 0.11 145;
+    --secondary-foreground: 0.97 0.01 82;
 
-    --muted: 0.92 0.02 75;
-    --muted-foreground: 0.5 0.03 60;
+    --muted: 0.91 0.03 78;
+    --muted-foreground: 0.5 0.04 55;
 
-    /* Terracotta accent */
-    --accent: 0.62 0.14 40;
-    --accent-foreground: 0.98 0.005 85;
+    /* Fire orange */
+    --accent: 0.6 0.17 46;
+    --accent-foreground: 0.97 0.01 82;
 
     --destructive: 0.55 0.2 25;
-    --destructive-foreground: 0.98 0.005 85;
+    --destructive-foreground: 0.97 0.01 82;
 
-    --border: 0.87 0.03 70;
-    --input: 0.87 0.03 70;
-    --ring: 0.38 0.09 155;
+    --border: 0.87 0.04 72;
+    --input: 0.87 0.04 72;
+    --ring: 0.6 0.17 46;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --chart-1: 0.62 0.14 40;
-    --chart-2: 0.38 0.09 155;
-    --chart-3: 0.72 0.12 70;
-    --chart-4: 0.55 0.1 100;
-    --chart-5: 0.48 0.12 30;
+    /* Amber gold */
+    --gold: 0.8 0.15 82;
+    --gold-foreground: 0.2 0.06 45;
 
-    --sidebar: 0.97 0.01 80;
-    --sidebar-foreground: 0.22 0.04 50;
-    --sidebar-primary: 0.38 0.09 155;
-    --sidebar-primary-foreground: 0.98 0.005 85;
-    --sidebar-accent: 0.92 0.02 75;
-    --sidebar-accent-foreground: 0.22 0.04 50;
-    --sidebar-border: 0.87 0.03 70;
-    --sidebar-ring: 0.38 0.09 155;
+    --chart-1: 0.6 0.17 46;
+    --chart-2: 0.38 0.11 145;
+    --chart-3: 0.8 0.15 82;
+    --chart-4: 0.48 0.12 30;
+    --chart-5: 0.3 0.08 47;
+
+    --sidebar: 0.96 0.02 82;
+    --sidebar-foreground: 0.2 0.06 45;
+    --sidebar-primary: 0.3 0.08 47;
+    --sidebar-primary-foreground: 0.97 0.01 82;
+    --sidebar-accent: 0.91 0.03 78;
+    --sidebar-accent-foreground: 0.2 0.06 45;
+    --sidebar-border: 0.87 0.04 72;
+    --sidebar-ring: 0.6 0.17 46;
   }
 }
 
@@ -63,46 +67,97 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Figtree", sans-serif;
   }
   h1,
   h2,
-  h3 {
-    font-family: "Playfair Display", serif;
+  h3,
+  h4 {
+    font-family: "Fraunces", serif;
   }
 }
 
-/* Bamboo texture overlay */
-.bamboo-texture {
+/* Bamboo stripe texture */
+.bamboo-bg {
+  background-color: oklch(var(--primary));
   background-image: repeating-linear-gradient(
       90deg,
-      oklch(0.35 0.08 155 / 0.04) 0px,
-      oklch(0.35 0.08 155 / 0.04) 2px,
-      transparent 2px,
-      transparent 40px
+      oklch(1 0 0 / 0.04) 0px,
+      oklch(1 0 0 / 0.04) 3px,
+      transparent 3px,
+      transparent 48px
     ),
     repeating-linear-gradient(
       0deg,
-      oklch(0.35 0.08 155 / 0.04) 0px,
-      oklch(0.35 0.08 155 / 0.04) 1px,
+      oklch(0 0 0 / 0.06) 0px,
+      oklch(0 0 0 / 0.06) 1px,
       transparent 1px,
-      transparent 40px
+      transparent 48px
     );
 }
 
-.leaf-gradient {
-  background: linear-gradient(
-    135deg,
-    oklch(0.95 0.03 150) 0%,
-    oklch(0.97 0.01 80) 40%,
-    oklch(0.94 0.04 75) 100%
-  );
+/* Warm parchment background */
+.parchment-bg {
+  background-color: oklch(var(--background));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
-.card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+/* Fire glow effect */
+.fire-glow {
+  box-shadow: 0 4px 24px oklch(0.6 0.17 46 / 0.3), 0 1px 4px
+    oklch(0.6 0.17 46 / 0.15);
 }
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px oklch(0.22 0.04 50 / 0.12);
+
+/* Tribal card */
+.tribal-card {
+  border: 2px solid oklch(var(--border));
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s
+    ease;
+}
+.tribal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px oklch(0.3 0.08 47 / 0.15);
+  border-color: oklch(var(--accent));
+}
+
+/* Decorative tribal divider */
+.tribal-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tribal-divider::before,
+.tribal-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, oklch(var(--border)));
+}
+.tribal-divider::after {
+  background: linear-gradient(to left, transparent, oklch(var(--border)));
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
 }

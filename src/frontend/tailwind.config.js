@@ -9,15 +9,13 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: "1rem",
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Fraunces"', 'Georgia', 'serif'],
+        body: ['"Figtree"', 'sans-serif'],
       },
       colors: {
         border: "oklch(var(--border))",
@@ -44,6 +42,10 @@ export default {
         accent: {
           DEFAULT: "oklch(var(--accent) / <alpha-value>)",
           foreground: "oklch(var(--accent-foreground))",
+        },
+        gold: {
+          DEFAULT: "oklch(var(--gold))",
+          foreground: "oklch(var(--gold-foreground))",
         },
         popover: {
           DEFAULT: "oklch(var(--popover))",
@@ -75,10 +77,13 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        village: "0 4px 24px oklch(0.22 0.04 50 / 0.10)",
+        tribal: "0 4px 20px oklch(0.30 0.08 47 / 0.12)",
+        fire: "0 4px 24px oklch(0.60 0.17 46 / 0.30)",
       },
       keyframes: {
         "accordion-down": {
@@ -89,15 +94,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.5s ease-out forwards",
       },
     },
   },
